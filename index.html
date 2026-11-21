@@ -96,6 +96,13 @@ th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vert
 th{background:#f7f9fa;font-weight:600}
 tr:last-child td{border-bottom:none}
 
+.demo{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:center}
+.demo img{border-radius:10px;border:1px solid var(--line);box-shadow:0 8px 24px rgba(27,42,53,.08)}
+.demo h3{font-size:21px;margin:0 0 6px}
+.demo .tag{display:inline-block;font-size:12.5px;font-weight:600;color:var(--blue);background:#e8f0f8;border-radius:20px;padding:2px 10px;margin-bottom:12px}
+.demo ul{padding-left:18px;margin:12px 0 18px;font-size:15.5px}
+.demo li{margin:4px 0}
+@media(max-width:820px){.demo{grid-template-columns:1fr}}
 footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:14.5px}
 footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
 footer img{height:28px;width:auto}
@@ -111,6 +118,7 @@ footer img{height:28px;width:auto}
       <a href="#editions">Editions</a>
       <a href="#start">Get started</a>
       <a href="#syntax">Template syntax</a>
+      <a href="#demos">Demos</a>
       <a class="gh" href="https://github.com/IbrahimAsiriDev/abappdf-cloud">GitHub</a>
     </nav>
   </div>
@@ -250,6 +258,26 @@ footer img{height:28px;width:auto}
         <tr><td><code>{{sum ITEMS.AMOUNT}}</code>, <code>{{count ITEMS}}</code></td><td>Totals at print time; also <code>avg</code>, <code>min</code>, <code>max</code></td></tr>
         <tr><td><code>data-fmt="#,##0.00"</code></td><td>Number and date formats, such as <code>#.##0,00</code>, <code>DD.MM.YYYY</code>, <code>YYYY-MM-DD</code></td></tr>
       </table></div>
+    </div>
+  </section>
+  <section id="demos" class="alt">
+    <div class="wrap">
+      <h2>Demos</h2>
+      <p class="sub">Complete examples you can install next to ABAPpdf and try on your own system.</p>
+      <div class="card demo">
+        <a class="demo-img" href="https://github.com/abapPDF/abappdf-demo-boarding-pass"><img src="assets/demo-boarding-pass.jpg" alt="Boarding pass printed with ABAPpdf" loading="lazy"></a>
+        <div>
+          <span class="tag">ABAP Cloud · RAP · Fiori</span>
+          <h3>Boarding pass</h3>
+          <p>A boarding pass for every booking of the ABAP flight model (<code>/DMO</code>). Open the bookings in a Fiori elements app and choose <em>Boarding pass</em> to get the PDF.</p>
+          <ul>
+            <li>A5 landscape form with shapes, a Code 128 barcode and a QR code</li>
+            <li>Data from five <code>/DMO</code> tables: booking, customer, carrier, connection and airport</li>
+            <li>Its own HTTP service and Fiori app, on top of ABAPpdf Cloud</li>
+          </ul>
+          <a class="btn primary" href="https://github.com/abapPDF/abappdf-demo-boarding-pass">View the demo on GitHub →</a>
+        </div>
+      </div>
     </div>
   </section>
 </main>
